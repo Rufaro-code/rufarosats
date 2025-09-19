@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>API Query Generator | Rufaro Satoro</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-container">
+      <h1 class="logo">Rufaro<span>Satoro</span></h1>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../projects.html" class="active">Projects</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container hero-content">
+      <div class="hero-text">
+        <h2><i class="fas fa-code"></i> API Query Generator</h2>
+        <p class="tagline">Dynamic API query generation for developers</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="posts container">
+    <article class="blog-card">
+      <div class="card-content">
+        <h3>Overview</h3>
+        <p>The API Query Generator is a tool designed to simplify API development by generating queries dynamically. Developers can input endpoints, parameters, and conditions, and the system automatically produces ready-to-use code snippets for RESTful APIs. This accelerates development workflows and reduces human error in building API requests.</p>
+
+        <h3>Motivation Behind API Query Generator</h3>
+        <p>During backend development, I often found myself writing repetitive queries manually. Mistakes in syntax, missing parameters, and inconsistent formatting caused delays and bugs. I wanted a tool that could generate API queries dynamically and consistently, so developers could focus on functionality rather than boilerplate code. This project was motivated by efficiency, reducing errors, and streamlining the development process.</p>
+
+        <h3>Key Features</h3>
+        <ul>
+          <li>⚡ Generates GET, POST, PUT, DELETE requests</li>
+          <li>📝 Accepts parameters, headers, and authentication options</li>
+          <li>💻 Outputs code snippets in JavaScript, Python, or cURL</li>
+          <li>🔄 Supports dynamic query building with conditional logic</li>
+          <li>📂 Saves queries for reuse in multiple projects</li>
+        </ul>
+
+        <h3>Tech Stack</h3>
+        <ul>
+          <li>🌐 Node.js and Express for backend processing</li>
+          <li>⚡ React for dynamic form interface</li>
+          <li>💾 LocalStorage for saved queries</li>
+          <li>🛠️ Axios for HTTP request generation</li>
+        </ul>
+
+        <h3>Challenges & Solutions</h3>
+        <p>One challenge was ensuring that dynamically generated queries were syntactically correct for multiple languages. I solved this by using template engines and rigorous validation logic. Another challenge was maintaining a responsive UI for complex query options; I leveraged React state management and modular components to achieve this.</p>
+
+        <h3>Lessons Learned</h3>
+        <p>Building this tool enhanced my skills in dynamic UI, template generation, and API design principles. I learned how small automation tools can drastically improve developer productivity and reduce repetitive errors.</p>
+
+        <h3>Future Improvements</h3>
+        <p>Plans include integrating database query generation, AI-assisted query suggestions, and exporting queries to Postman collections. This will make the tool even more powerful for backend development and API testing.</p>
+
+        <p><a href="../projects.html" class="btn primary">← Back to Projects</a></p>
+      </div>
+    </article>
+  </section>
+
+  <footer class="site-footer">
+    <div class="footer-container">
+      <p>© 2025 Rufaro Satoro</p>
+      <div class="social-links">
+        <a href="https://github.com/rufarosatoro" target="_blank">GitHub</a> |
+        <a href="#" target="_blank">LinkedIn</a> |
+        <a href="../contact.html">Contact</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog Posts | Rufaro Satoro</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <h1 class="logo">Rufaro<span>Satoro</span></h1>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="posts.html" class="active">Posts</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- BLOG SECTION -->
+  <section class="blog container">
+    <h2 class="section-title">📖 My Projects Blog</h2>
+    <div class="blog-grid" id="blogGrid">
+      <!-- JS will populate posts here -->
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <p>© 2025 Rufaro Satoro</p>
+      <div class="social-links">
+        <a href="https://github.com/rufarosatoro" target="_blank">GitHub</a> |
+        <a href="#" target="_blank">LinkedIn</a> |
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const posts = [
+      {
+        title: "KolorMix",
+        link: "post_kolormix.html",
+        img: "assets/kolormix.png",
+        excerpt: "A web app for experimenting with color palettes and creative designs.",
+        content: "KolorMix allows designers and enthusiasts to mix, match, and test colors for their projects. It provides tools to generate complementary palettes, save favorites, and explore trending color schemes."
+      },
+      {
+        title: "DrowzyKnight",
+        link: "post_drowzyknight.html",
+        img: "assets/drowzyknight.png",
+        excerpt: "Optimizing driver safety and alertness tracking.",
+        content: "DrowzyKnight helps monitor driver alertness using sensors and notifications. The project includes real-time drowsiness alerts and driver analytics to reduce accidents."
+      },
+      {
+        title: "apiQueryGen",
+        link: "post_apiquerygen.html",
+        img: "assets/apiquerygen.png",
+        excerpt: "Generates API queries dynamically for faster development.",
+        content: "API Query Generator accelerates development by automatically creating API query templates from database schemas. It saves developers hours of manual coding."
+      },
+      {
+        title: "accessible-app",
+        link: "post_accessible-app.html",
+        img: "assets/accessible-app.png",
+        excerpt: "Voice-driven React app designed for accessibility and inclusive UX.",
+        content: "Accessible-App provides voice-driven controls and enhanced accessibility features for users with disabilities. It demonstrates inclusive design principles using React and modern web APIs."
+      },
+      {
+        title: "robot_automate",
+        link: "post_robot_automate.html",
+        img: "assets/robot_automate.png",
+        excerpt: "Automation scripts and tools for repetitive tasks using Python.",
+        content: "Robot Automate simplifies repetitive tasks by automating file handling, data processing, and report generation. Python scripts ensure reliability and speed."
+      },
+      {
+        title: "spring_automate",
+        link: "post_spring_automate.html",
+        img: "assets/spring_automate.png",
+        excerpt: "Spring Boot automation solutions for backend workflows.",
+        content: "Spring Automate focuses on backend automation using Spring Boot. It includes cron jobs, scheduled tasks, and workflow optimizations to streamline operations."
+      },
+      {
+        title: "chatt_buddy",
+        link: "post_chatt_buddy.html",
+        img: "assets/chatt_buddy.png",
+        excerpt: "Chat application with AI-assisted messaging features.",
+        content: "Chatt Buddy is a modern chat application enhanced with AI suggestions for responses, automated reminders, and message analytics."
+      },
+      {
+        title: "summarize",
+        link: "post_summarize.html",
+        img: "assets/summarize.png",
+        excerpt: "AI-powered app that condenses long text into concise summaries.",
+        content: "Summarize uses AI to shorten long documents, articles, or reports into concise summaries, improving reading efficiency and comprehension."
+      },
+      {
+        title: "healthbuddy_ussd",
+        link: "post_healthbuddy.html",
+        img: "assets/healthbuddy_ussd.png",
+        excerpt: "USSD app providing quick health tips and information on mobile.",
+        content: "HealthBuddy USSD provides accessible health advice and information via mobile phones, enabling users to receive guidance without internet connectivity."
+      },
+      {
+        title: "restaurant_ussd",
+        link: "post_restaurant_ussd.html",
+        img: "assets/restaurant_ussd.png",
+        excerpt: "USSD-based restaurant ordering and information system.",
+        content: "Restaurant USSD allows users to browse menus, place orders, and get information about restaurants directly from their mobile devices."
+      },
+      {
+        title: "spring_jwt-implementation",
+        link: "post_spring_jwt.html",
+        img: "assets/spring_jwt.png",
+        excerpt: "JWT authentication implementation in Spring Boot apps.",
+        content: "This project demonstrates secure JWT authentication in Spring Boot applications, including role-based access and token validation."
+      }
+    ];
+
+    const blogGrid = document.getElementById("blogGrid");
+
+    posts.forEach(post => {
+      const card = document.createElement("article");
+      card.className = "blog-card";
+      card.innerHTML = `
+        <img src="${post.img}" alt="${post.title}">
+        <div class="card-content">
+          <h3><a href="${post.link}">${post.title}</a></h3>
+          <p>${post.excerpt}</p>
+          <a href="${post.link}" class="read-more">Read More →</a>
+        </div>
+      `;
+      blogGrid.appendChild(card);
+    });
+  </script>
+</body>
+</html>

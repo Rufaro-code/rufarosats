@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Rufaro Satoro</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <style>
+    /* ---------- CONTACT HERO ---------- */
+    .contact-hero {
+      position: relative;
+      background: url('assets/contact-bg.jpg') center/cover no-repeat;
+      color: #fff;
+      padding: 6rem 1rem 4rem 1rem;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .contact-hero .overlay {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.6);
+      z-index: 1;
+    }
+
+    .contact-hero .hero-text {
+      position: relative;
+      z-index: 2;
+      max-width: 700px;
+      margin: auto;
+      opacity: 0;
+      transform: translateY(30px);
+      animation: slideIn 1s forwards;
+    }
+
+    .contact-hero h2 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    .contact-hero p {
+      font-size: 1.2rem;
+      line-height: 1.6;
+      color: #f0f0f0;
+    }
+
+    @keyframes slideIn {
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ---------- CONTACT MAIN ---------- */
+    .contact-main {
+      display: flex;
+      justify-content: center;
+      gap: 3rem;
+      margin: 4rem auto;
+      flex-wrap: wrap;
+    }
+
+    .contact-container {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      width: 100%;
+    }
+
+    .contact-box, .contact-form-box {
+      background: #fff;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      flex: 1 1 350px;
+      max-width: 450px;
+      opacity: 0;
+      transform: translateY(50px);
+      animation: fadeInUp 0.8s forwards;
+    }
+
+    .contact-box { animation-delay: 0.2s; }
+    .contact-form-box { animation-delay: 0.4s; }
+
+    .contact-box:hover, .contact-form-box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+
+    @keyframes fadeInUp {
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .contact-box h3, .contact-form-box h3 {
+      color: #4cafef;
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .contact-box p {
+      margin-bottom: 0.8rem;
+      font-size: 1rem;
+      line-height: 1.5;
+      transition: transform 0.3s ease, color 0.3s ease;
+    }
+
+    .contact-box a {
+      color: #4cafef;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .contact-box a:hover {
+      text-decoration: underline;
+      transform: translateX(3px);
+      color: #3a9ddf;
+    }
+
+    /* ---------- CONTACT FORM ---------- */
+    .contact-form-box form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .contact-form-box .form-group {
+      position: relative;
+      display: flex;
+      flex-direction: column-reverse;
+    }
+
+    .contact-form-box input,
+    .contact-form-box textarea {
+      width: 100%;
+      padding: 1rem 1rem 0.5rem 1rem;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      outline: none;
+      transition: all 0.3s ease;
+      background: transparent;
+    }
+
+    .contact-form-box label {
+      position: absolute;
+      left: 1rem;
+      top: 1rem;
+      color: #888;
+      font-weight: 500;
+      font-size: 1rem;
+      pointer-events: none;
+      transition: all 0.3s ease;
+      background: #fff;
+      padding: 0 0.2rem;
+    }
+
+    .contact-form-box input:focus + label,
+    .contact-form-box textarea:focus + label,
+    .contact-form-box input.filled + label,
+    .contact-form-box textarea.filled + label {
+      top: -0.6rem;
+      left: 0.8rem;
+      font-size: 0.85rem;
+      color: #4cafef;
+    }
+
+    .contact-form-box textarea {
+      min-height: 150px;
+      resize: vertical;
+    }
+
+    .contact-form-box button {
+      align-self: flex-start;
+      background: #4cafef;
+      color: #fff;
+      border: none;
+      padding: 0.8rem 1.5rem;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .contact-form-box button:hover {
+      background: #3a9ddf;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    #formStatus {
+      margin-top: 1rem;
+      font-weight: 600;
+      color: #4cafef;
+      min-height: 1.2rem;
+      transition: all 0.3s ease;
+    }
+
+    .contact-form-box input.error,
+    .contact-form-box textarea.error {
+      border-color: #f44336;
+    }
+
+    .contact-form-box input.error + label,
+    .contact-form-box textarea.error + label {
+      color: #f44336;
+    }
+
+    .contact-form-box .error-message {
+      color: #f44336;
+      font-size: 0.85rem;
+      margin-top: -0.5rem;
+    }
+
+    /* ---------- RESPONSIVE ---------- */
+    @media (max-width: 1024px) {
+      .contact-main {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+      }
+      .contact-container {
+        flex-direction: column;
+        gap: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <h1 class="logo">Rufaro<span>Satoro</span></h1>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- CONTACT HERO -->
+  <section class="hero contact-hero">
+    <div class="overlay"></div>
+    <div class="container hero-content">
+      <div class="hero-text">
+        <h2>📬 Get in Touch</h2>
+        <p class="intro">Have a project, question, or just want to say hi? Drop me a message below, and I’ll get back to you soon!</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT FORM & INFO -->
+  <main class="container main-content contact-main">
+    <div class="contact-container">
+
+      <!-- Contact Info -->
+      <div class="contact-box">
+        <h3>📌 Contact Info</h3>
+        <p>Email: <a href="mailto:rufarosatoro@gmail.com">rufarosatoro@gmail.com</a></p>
+        <p>GitHub: <a href="https://github.com/rufarosatoro" target="_blank">@rufaro-code</a></p>
+        <p>LinkedIn: <a href="#">linkedin.com/in/rufarosatoro</a></p>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="contact-form-box">
+        <form id="contactForm">
+          <div class="form-group">
+            <input type="text" id="name" name="name" required>
+            <label for="name">Full Name</label>
+            <span class="error-message"></span>
+          </div>
+
+          <div class="form-group">
+            <input type="email" id="email" name="email" required>
+            <label for="email">Email Address</label>
+            <span class="error-message"></span>
+          </div>
+
+          <div class="form-group">
+            <textarea id="message" name="message" required></textarea>
+            <label for="message">Your Message</label>
+            <span class="error-message"></span>
+          </div>
+
+          <button type="submit">Send Message</button>
+          <div id="formStatus"></div>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <p>© 2025 Rufaro Satoro</p>
+      <div class="social-links">
+        <a href="https://github.com/rufarosatoro" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="mailto:rufarosatoro@gmail.com"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Floating label logic
+    const inputs = document.querySelectorAll('.contact-form-box input, .contact-form-box textarea');
+    inputs.forEach(input => {
+      input.addEventListener('blur', () => {
+        if(input.value) input.classList.add('filled');
+        else input.classList.remove('filled');
+      });
+    });
+
+    // Simple Form Submit Simulation
+    const form = document.getElementById('contactForm');
+    const status = document.getElementById('formStatus');
+
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      status.textContent = "✅ Thank you! Your message has been sent.";
+      status.style.color = "#4cafef";
+      form.reset();
+      inputs.forEach(input => input.classList.remove('filled'));
+    });
+  </script>
+</body>
+</html>

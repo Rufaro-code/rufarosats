@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KolorMix | Rufaro Satoro</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <h1 class="logo">Rufaro<span>Satoro</span></h1>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../projects.html" class="active">Projects</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- POST HERO -->
+  <section class="hero">
+    <div class="container hero-content">
+      <div class="hero-text">
+        <h2><i class="fas fa-palette"></i> KolorMix</h2>
+        <p class="tagline">Web app for experimenting with color palettes and creative designs</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- POST CONTENT -->
+  <section class="posts container">
+    <article class="blog-card">
+      <div class="card-content">
+        <h3>Overview</h3>
+        <p>KolorMix is a web application designed to help designers, developers, and creative enthusiasts experiment with color palettes effortlessly. Users can generate harmonious color combinations, preview them in real-time, and export palettes for projects in web development, graphic design, and UI/UX design. The app provides an intuitive interface with drag-and-drop functionality, live previews, and integration with popular color standards like HEX, RGB, and HSL.</p>
+
+        <h3>Motivation Behind KolorMix</h3>
+        <p>The idea for KolorMix came from my passion for creative design and the challenges I personally faced while selecting color palettes for my projects. Often, I would spend hours manually testing color combinations to see which ones looked harmonious. I wanted a tool that could speed up this process while providing inspiration. KolorMix was born as a platform that blends creativity with functionality, allowing anyone—novice or expert—to experiment and generate beautiful palettes in minutes. Beyond personal use, I wanted this app to support the creative community, helping them focus on design rather than technical color matching.</p>
+
+        <h3>Key Features</h3>
+        <ul>
+          <li>🎨 Generate random color palettes with one click</li>
+          <li>🖌️ Drag-and-drop interface for adjusting colors</li>
+          <li>📊 Live preview with UI mockups</li>
+          <li>💾 Export palettes in HEX, RGB, and HSL formats</li>
+          <li>🔄 Save favorite palettes for future projects</li>
+          <li>🌈 Color harmony suggestions (complementary, analogous, triadic)</li>
+        </ul>
+
+        <h3>Tech Stack</h3>
+        <p>KolorMix is built using modern web technologies to ensure a smooth, responsive experience:</p>
+        <ul>
+          <li>⚡ HTML5, CSS3, and JavaScript ES6+</li>
+          <li>🎨 React for dynamic UI components</li>
+          <li>💻 Tailwind CSS for styling and responsive design</li>
+          <li>🖥️ LocalStorage for saving user palettes</li>
+          <li>🌐 Deployment via Vercel for fast hosting</li>
+        </ul>
+
+        <h3>Challenges & Solutions</h3>
+        <p>Developing KolorMix was both exciting and challenging. One of the main hurdles was ensuring the real-time color preview worked smoothly without lag. I initially struggled with performance issues when dynamically updating multiple color elements simultaneously. To solve this, I optimized the React components, reduced unnecessary re-renders, and leveraged memoization. Another challenge was implementing color harmony algorithms. I researched color theory and used a combination of mathematical formulas and JavaScript logic to generate accurate complementary and analogous palettes.</p>
+
+        <h3>Lessons Learned</h3>
+        <p>KolorMix taught me a lot about bridging creativity and code. I improved my understanding of dynamic UI design, responsive layouts, and performance optimization in React. Additionally, it deepened my appreciation for user experience design, especially the importance of simplicity and intuitive interfaces. Building this project reinforced the idea that solving personal pain points can lead to tools that help a wider community.</p>
+
+        <h3>Future Improvements</h3>
+        <p>Looking ahead, I plan to enhance KolorMix with features such as collaborative palette creation, AI-based color suggestions, and integration with popular design tools like Figma and Adobe XD. I also aim to implement dark mode, advanced color accessibility checks, and more export options to make the app even more versatile for professional designers.</p>
+
+        <p><a href="../projects.html" class="btn primary">← Back to Projects</a></p>
+      </div>
+    </article>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <p>© 2025 Rufaro Satoro</p>
+      <div class="social-links">
+        <a href="https://github.com/rufarosatoro" target="_blank">GitHub</a> |
+        <a href="#" target="_blank">LinkedIn</a> |
+        <a href="../contact.html">Contact</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

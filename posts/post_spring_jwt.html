@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spring JWT Implementation | Rufaro Satoro</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-container">
+      <h1 class="logo">Rufaro<span>Satoro</span></h1>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../projects.html" class="active">Projects</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container hero-content">
+      <div class="hero-text">
+        <h2><i class="fas fa-lock"></i> Spring JWT Implementation</h2>
+        <p class="tagline">Secure authentication using JWT in Spring Boot applications</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="posts container">
+    <article class="blog-card">
+      <div class="card-content">
+        <h3>Overview</h3>
+        <p>This project demonstrates implementing secure authentication in Spring Boot applications using JSON Web Tokens (JWT). Users can log in, receive a JWT, and securely access protected routes. It’s a foundational system for any modern web or mobile app requiring authentication.</p>
+
+        <h3>Motivation Behind Spring JWT Implementation</h3>
+        <p>With the growing importance of secure APIs, I wanted a reusable implementation that could be integrated into multiple projects. JWT offers stateless authentication, making apps scalable and secure. The motivation was to learn best practices and create a secure, modular approach to user authentication.</p>
+
+        <h3>Key Features</h3>
+        <ul>
+          <li>🔒 Secure login with JWT token generation</li>
+          <li>🛡️ Role-based access control</li>
+          <li>⏳ Token expiration and refresh mechanisms</li>
+          <li>📄 Example protected endpoints for testing</li>
+          <li>⚡ Lightweight and modular Spring Boot setup</li>
+        </ul>
+
+        <h3>Tech Stack</h3>
+        <ul>
+          <li>🌱 Spring Boot framework</li>
+          <li>🗄️ H2/MySQL database for user credentials</li>
+          <li>🔑 JWT for stateless authentication</li>
+          <li>💻 Postman for testing API endpoints</li>
+        </ul>
+
+        <h3>Challenges & Solutions</h3>
+        <p>Handling token expiration and refresh flow was initially tricky. I implemented secure token storage and a refresh endpoint to maintain seamless authentication. Ensuring role-based access for various endpoints required careful configuration of Spring Security.</p>
+
+        <h3>Lessons Learned</h3>
+        <p>This project enhanced my knowledge of Spring Security, JWT workflow, and best practices for stateless authentication. It also taught me the importance of clear documentation for reusable authentication modules.</p>
+
+        <h3>Future Improvements</h3>
+        <p>Future work includes integrating OAuth2, social login, multi-factor authentication, and JWT blacklist/whitelist features for advanced security.</p>
+
+        <p><a href="../projects.html" class="btn primary">← Back to Projects</a></p>
+      </div>
+    </article>
+  </section>
+
+  <footer class="site-footer">
+    <div class="footer-container">
+      <p>© 2025 Rufaro Satoro</p>
+      <div class="social-links">
+        <a href="https://github.com/rufarosatoro" target="_blank">GitHub</a> |
+        <a href="#" target="_blank">LinkedIn</a> |
+        <a href="../contact.html">Contact</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
