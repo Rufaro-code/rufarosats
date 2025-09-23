@@ -3,352 +3,763 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rufaro Satoro | Portfolio</title>
+  <title>Rufaro Satoro | Full-Stack Developer & UI/UX Designer</title>
+  
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <!-- SEO & Social Meta -->
-  <meta name="description" content="Rufaro Satoro | Portfolio showcasing projects, blog posts, and my skills in web and mobile development.">
-  <meta name="keywords" content="Rufaro Satoro, portfolio, web developer, mobile apps, projects, blog">
+  <meta name="description" content="Rufaro Satoro - Professional Full-Stack Developer, UI/UX Designer, and Tech Innovator. Specialized in modern web applications, mobile development, and creative digital solutions.">
+  <meta name="keywords" content="Rufaro Satoro, Full-Stack Developer, UI/UX Designer, Web Developer, Mobile Apps, React, Node.js, JavaScript, Portfolio">
   <meta name="author" content="Rufaro Satoro">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://rufarosats.vercel.app/">
 
-  <meta property="og:title" content="Rufaro Satoro | Portfolio">
-  <meta property="og:description" content="Explore my projects, blog posts, and skills in web and mobile development.">
   <meta property="og:type" content="website">
+  <meta property="og:title" content="Rufaro Satoro | Full-Stack Developer & UI/UX Designer">
+  <meta property="og:description" content="Professional developer specializing in modern web applications, UI/UX design, and innovative digital solutions. View my portfolio and latest projects.">
   <meta property="og:url" content="https://rufarosats.vercel.app/">
   <meta property="og:image" content="https://rufarosats.vercel.app/assets/portfolio-preview.jpg">
+  <meta property="og:site_name" content="Rufaro Satoro Portfolio">
 
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Rufaro Satoro | Portfolio">
-  <meta name="twitter:description" content="Explore my projects, blog posts, and skills in web and mobile development.">
+  <meta name="twitter:title" content="Rufaro Satoro | Full-Stack Developer & UI/UX Designer">
+  <meta name="twitter:description" content="Professional developer specializing in modern web applications and innovative digital solutions.">
   <meta name="twitter:image" content="https://rufarosats.vercel.app/assets/portfolio-preview.jpg">
 
-  <style>
-    /* Hero Canvas */
-    /* Hero overlay & canvas */
-    #heroCanvas { position: absolute; top:0; left:0; width:100%; height:100%; z-index:0; }
-    .hero .overlay { position: absolute; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.3); z-index:1; border-radius:12px; }
-
-    /* Hero flex layout */
-    .hero-content { position: relative; z-index:2; display:flex; align-items:flex-start; gap:2rem; padding-top:1rem; }
-    .hero-image { flex: 0 0 auto; margin-right:1.5rem; }
-    .hero-image img { width: 180px; max-width:100%; border-radius:50%; border:5px solid #4cafef; }
-    .hero-text { flex: 1 1 250px; }
-
-    /* Typing effect with gradient */
-    #typing {
-      font-weight:bold;
-      background: linear-gradient(90deg, #4cafef, #ff6b6b, #ffca28, #4cafef);
-      background-size: 300% 100%;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      animation: colorShift 4s linear infinite;
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Rufaro Satoro",
+    "url": "https://rufarosats.vercel.app/",
+    "image": "https://rufarosats.vercel.app/assets/profile1.png",
+    "jobTitle": "Full-Stack Developer & UI/UX Designer",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Independent"
+    },
+    "sameAs": [
+      "https://github.com/Rufaro-code",
+      "https://linkedin.com/in/rufaro-satoro-2565001b5"
+    ],
+    "knowsAbout": ["Web Development", "Mobile Development", "UI/UX Design", "JavaScript", "React", "Node.js"],
+    "alumniOf": "Tech Professional",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "ZW"
     }
-    #typing::after { content: '|'; display:inline-block; margin-left:2px; animation: blink 0.7s infinite; color:#4cafef; font-weight:bold; }
+  }
+  </script>
 
-    @keyframes blink { 0%,50%,100%{opacity:1;} 25%,75%{opacity:0;} }
-    @keyframes colorShift { 0%{background-position:0% 50%;} 50%{background-position:100% 50%;} 100%{background-position:0% 50%;} }
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 
-    /* Reduce header */
-    .site-header { padding:0.5rem 0; }
-
-    /* Responsive hero */
-    @media(max-width:768px){
-      .hero-content { flex-direction: column; align-items:center; text-align:center; }
-      .hero-image img { width:200px; margin-bottom:1rem; margin-right:0; }
-    }
-    @media(max-width:480px){
-      .hero-image img { width:160px; }
-      .hero-text h1 { font-size:1.6rem; }
-    }
-    /* Typing Effect */
-    #typing {
-      font-weight: bold;
-      background: linear-gradient(90deg, #4cafef, #ff6b6b, #ffca28, #4cafef);
-      background-size: 300% 100%;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      animation: colorShift 4s linear infinite;
-    }
-
-    #typing::after {
-      content: '|';
-      display: inline-block;
-      margin-left: 2px;
-      animation: blink 0.7s infinite;
-      color: #4cafef;
-      font-weight: bold;
-    }
-
-    @keyframes blink { 0%,50%,100%{opacity:1;} 25%,75%{opacity:0;} }
-    @keyframes colorShift { 0%{background-position:0% 50%;} 50%{background-position:100% 50%;} 100%{background-position:0% 50%;} }
-
-    /* Smaller header */
-/* --------- SMALLER HEADER --------- */
-.site-header {
-  padding: 0.2rem 0;       /* smaller vertical padding */
-  font-size: 0.9rem;       /* slightly smaller text */
-  box-shadow: 0 1px 4px rgba(0,0,0,0.15); /* lighter shadow */
-}
-
-.nav-container {
-  gap: 0.5rem;             /* reduce spacing */
-}
-
-.logo {
-  font-size: 1.5rem;       /* smaller logo */
-}
-
-.nav-links a {
-  font-size: 0.9rem;       /* smaller nav links */
-}
-
-/* Hamburger */
-.hamburger {
-  font-size: 1.5rem;
-}
-
-/* --------- HERO ADJUSTMENTS --------- */
-.hero {
-  padding: 3rem 1rem 3rem 1rem; /* reduce top padding */
-}
-
-.hero-image img {
-  width: 280px;           /* enlarge profile pic slightly */
-  border-radius: 50%;
-  border: 5px solid #4cafef;
-}
-/* Video Container for fallback message */
-.blog-card .video-wrapper {
-  position: relative;
-  width: 100%;
-  border-radius: 8px;
-  overflow: hidden;
-  background: #f0f0f0; /* fallback background */
-  min-height: 180px;    /* ensures some height even if video fails */
-}
-
-/* Style the video */
-.blog-card .video-wrapper video {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-/* Overlay message */
-.blog-card .video-wrapper .fallback-message {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: #555;
-  font-size: 1rem;
-  font-weight: 500;
-  text-align: center;
-  pointer-events: none; /* allows clicks to pass through if video works */
-}
-
-  </style>
+  <link rel="preload" href="assets/profile1.png" as="image">
+  <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
 </head>
 <body>
-
-  <!-- HEADER -->
-  <header class="site-header">
+  <header class="site-header" role="banner">
     <div class="container nav-container">
-      <div class="logo">Rufaro<span>Satoro</span></div>
-      <div class="hamburger" id="hamburger"><i class="fas fa-bars"></i></div>
-      <nav class="nav-links" id="navLinks">
-        <a href="index.html" class="active">Home</a>
+      <div class="logo" aria-label="Rufaro Satoro">
+        Rufaro<span>Satoro</span>
+      </div>
+      
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+        <i class="fas fa-bars" aria-hidden="true"></i>
+      </button>
+      
+      <nav class="nav-links" id="navLinks" role="navigation" aria-label="Main navigation">
+        <a href="index.html" class="active" aria-current="page">Home</a>
         <a href="projects.html">Projects</a>
         <a href="contact.html">Contact</a>
       </nav>
-      <button id="themeToggle">🌙</button>
+      
+       <div class="theme-toggle">
+  <button id="themeToggle" aria-label="Switch theme">🌙</button>
+</div>
     </div>
   </header>
 
-  <!-- HERO -->
-  <section class="hero">
-    <canvas id="heroCanvas"></canvas>
-    <div class="overlay"></div>
+  <section class="hero" role="banner">
+    <canvas id="heroCanvas" aria-hidden="true"></canvas>
+    <div class="overlay" aria-hidden="true"></div>
+    
     <div class="container hero-content">
       <div class="hero-text">
-        <h1>👋 Hi, I’m Rufaro - <span id="typing"></span></h1>
-        <p class="tagline">Technovator • Developer • Innovator • Blogger</p>
-        <p class="intro">I build digital products and share insights on tech, creativity, and growth. Explore my work and thoughts below.</p>
+        <h1>
+          👋 Hi, I'm Rufaro - <span id="typing" aria-live="polite"></span>
+        </h1>
+        <!-- <p class="tagline">Full-Stack Developer • UI/UX Designer • Tech Innovator • Digital Craftsman</p> -->
+        <p class="intro">
+          I create exceptional digital experiences through modern web applications, 
+          intuitive user interfaces, and innovative solutions that bridge the gap 
+          between design and functionality.
+        </p>
         <div class="hero-buttons">
-          <a href="projects.html" class="btn primary">🚀 View Projects</a>
-          <a href="contact.html" class="btn secondary">📬 Get in Touch</a>
+          <a href="projects.html" class="btn primary" aria-describedby="projects-description">
+            <i class="fas fa-rocket" aria-hidden="true"></i>
+            View Projects
+          </a>
+          <a href="contact.html" class="btn secondary loading-spinner-btn" aria-describedby="contact-description">
+            <i class="fas fa-paper-plane" aria-hidden="true"></i>
+            Get in Touch
+          </a>
         </div>
+        <div id="projects-description" class="sr-only">View my latest projects and portfolio work</div>
+        <div id="contact-description" class="sr-only">Send me a message or connect with me</div>
       </div>
+      
       <div class="hero-image">
-        <img src="assets/profile1.png" alt="Rufaro Satoro">
+        <img 
+          src="assets/profile1.png" 
+          alt="Rufaro Satoro - Professional headshot of a full-stack developer and UI/UX designer"
+          class="round-image"
+          loading="eager"
+        >
       </div>
     </div>
   </section>
 
-  <!-- MAIN -->
-  <main class="container main-content">
+  <main class="container main-content" role="main">
     <div class="layout-grid">
       <section class="content-area">
-        <h2 class="section-title">📖 Latest Projects & Posts</h2>
+        <h2 class="section-title">
+          <i class="fas fa-code" aria-hidden="true"></i>
+          Featured Projects & Insights
+        </h2>
+        
         <div class="projects-grid" id="blogGrid">
-          <!-- Project 1 -->
-          <article class="blog-card" data-category="projects">
-            <div class="card-icon"><i class="fas fa-palette"></i></div>
+          <article class="blog-card animate-on-scroll" data-category="projects">
+            <div class="card-icon">
+              <i class="fas fa-palette" aria-hidden="true"></i>
+            </div>
             <div class="card-content">
-              <h3><a href="posts/post_kolormix.html">KolorMix - Live Project</a></h3>
-<div class="video-wrapper">
-  <video src="assets/kolormix-demo.mp4" autoplay loop muted playsinline loading="lazy"></video>
-  <div class="fallback-message">🎬 Video preview not available</div>
-</div>
-              <p>A live web app for experimenting with color palettes and digital art.</p>
+              <h3>
+                <a href="posts/post_kolormix.html">KolorMix - Creative Color Studio</a>
+              </h3>
+              <div class="video-wrapper">
+                <video 
+                  src="assets/kolormix-demo.mp4" 
+                  autoplay 
+                  loop 
+                  muted 
+                  playsinline 
+                  loading="lazy"
+                  aria-label="KolorMix application demo video"
+                >
+                  <div class="fallback-message">
+                    🎬 Video preview not available
+                  </div>
+                </video>
+              </div>
+              <p>
+                An innovative web application for exploring color palettes, creating digital art, 
+                and experimenting with advanced color theory. Built with modern JavaScript and 
+                intuitive UI/UX principles.
+              </p>
+              <div class="tech-tags">
+                <span>JavaScript</span>
+                <span>CSS3</span>
+                <span>Canvas API</span>
+                <span>Responsive Design</span>
+              </div>
               <div class="post-links">
-                <a href="https://kolormix.vercel.app" target="_blank" class="btn primary"><i class="fas fa-external-link-alt"></i> Live App</a>
-                <a href="https://github.com/rufarosatoro/kolormix" target="_blank" class="btn secondary"><i class="fab fa-github"></i> Code</a>
+                <a 
+                  href="https://kolormix.vercel.app" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  class="btn primary"
+                  aria-label="View KolorMix live application"
+                >
+                  <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+                  Live Demo
+                </a>
+                <a 
+                  href="https://github.com/rufarosatoro/kolormix" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  class="btn secondary"
+                  aria-label="View KolorMix source code on GitHub"
+                >
+                  <i class="fab fa-github" aria-hidden="true"></i>
+                  Source Code
+                </a>
               </div>
             </div>
           </article>
-          <!-- Project 2 -->
-          <article class="blog-card" data-category="tech-tips">
-            <div class="card-icon"><i class="fas fa-code"></i></div>
+
+          <article class="blog-card animate-on-scroll" data-category="tech-tips">
+            <div class="card-icon">
+              <i class="fas fa-tools" aria-hidden="true"></i>
+            </div>
             <div class="card-content">
-              <h3><a href="posts/post_tech_stack.html">My Favorite Tech Stack</a></h3>
-              <p>Tools and technologies I use every day to build projects efficiently.</p>
+              <h3>
+                <a href="posts/post_tech_stack.html">My Professional Tech Stack</a>
+              </h3>
+              <p>
+                Explore the cutting-edge tools, frameworks, and technologies I use daily 
+                to build scalable, maintainable, and high-performance applications.
+              </p>
+              <div class="tech-tags">
+                <span>React</span>
+                <span>Node.js</span>
+                <span>TypeScript</span>
+                <span>MongoDB</span>
+              </div>
               <div class="post-links">
-                <a href="posts/post_tech_stack.html" class="btn primary"><i class="fas fa-external-link-alt"></i> Read Post</a>
+                <a href="posts/post_tech_stack.html" class="btn primary">
+                  <i class="fas fa-article" aria-hidden="true"></i>
+                  Read Article
+                </a>
               </div>
             </div>
           </article>
+
+          <article class="blog-card animate-on-scroll" data-category="projects">
+            <div class="card-icon">
+              <i class="fas fa-mobile-alt" aria-hidden="true"></i>
+            </div>
+            <div class="card-content">
+              <h3>
+                <a href="projects.html">Mobile-First Solutions</a>
+              </h3>
+              <p>
+                Responsive web applications and mobile-optimized experiences that work 
+                seamlessly across all devices and screen sizes.
+              </p>
+              <div class="tech-tags">
+                <span>Progressive Web Apps</span>
+                <span>Mobile UX</span>
+                <span>Performance</span>
+              </div>
+              <div class="post-links">
+                <a href="projects.html" class="btn primary">
+                  <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                  View All Projects
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <h2 class="section-title skills-title">
+          <i class="fas fa-star" aria-hidden="true"></i>
+          Skills & Expertise
+        </h2>
+        <div class="skills-grid" id="skillsGrid">
+          <div class="skill-card animate-on-scroll" data-skill="React & Next.js" data-level="95">
+            <div class="skill-name">
+              <i class="fab fa-react" aria-hidden="true"></i>
+              React & Next.js
+            </div>
+            <div class="skill-bar-container">
+              <div class="skill-bar" style="width: 0;"></div>
+            </div>
+          </div>
+          <div class="skill-card animate-on-scroll" data-skill="Node.js & Express" data-level="90">
+            <div class="skill-name">
+              <i class="fab fa-node-js" aria-hidden="true"></i>
+              Node.js & Express
+            </div>
+            <div class="skill-bar-container">
+              <div class="skill-bar" style="width: 0;"></div>
+            </div>
+          </div>
+          <div class="skill-card animate-on-scroll" data-skill="JavaScript/TypeScript" data-level="98">
+            <div class="skill-name">
+              <i class="fas fa-code" aria-hidden="true"></i>
+              JavaScript/TypeScript
+            </div>
+            <div class="skill-bar-container">
+              <div class="skill-bar" style="width: 0;"></div>
+            </div>
+          </div>
+          <div class="skill-card animate-on-scroll" data-skill="Database Management" data-level="85">
+            <div class="skill-name">
+              <i class="fas fa-database" aria-hidden="true"></i>
+              Database Management (SQL/NoSQL)
+            </div>
+            <div class="skill-bar-container">
+              <div class="skill-bar" style="width: 0;"></div>
+            </div>
+          </div>
+          <div class="skill-card animate-on-scroll" data-skill="UI/UX Design" data-level="80">
+            <div class="skill-name">
+              <i class="fas fa-pen-nib" aria-hidden="true"></i>
+              UI/UX Design
+            </div>
+            <div class="skill-bar-container">
+              <div class="skill-bar" style="width: 0;"></div>
+            </div>
+          </div>
+          <div class="skill-card animate-on-scroll" data-skill="Cloud & DevOps" data-level="75">
+            <div class="skill-name">
+              <i class="fas fa-cloud" aria-hidden="true"></i>
+              Cloud & DevOps (AWS, Docker)
+            </div>
+            <div class="skill-bar-container">
+              <div class="skill-bar" style="width: 0;"></div>
+            </div>
+          </div>
         </div>
       </section>
 
-      <!-- SIDEBAR -->
-      <aside class="sidebar">
-        <div class="sidebar-card about-me">
-          <h3>👨‍💻 About Me</h3>
-          <p>Passionate developer building apps, platforms, and tools that solve real-world problems.</p>
+      <aside class="sidebar" role="complementary">
+        <div class="sidebar-card about-me animate-on-scroll">
+          <h3>
+            <i class="fas fa-user-circle" aria-hidden="true"></i>
+            About Me
+          </h3>
+          <p>
+            Passionate full-stack developer with expertise in modern web technologies, 
+            UI/UX design, and creating digital solutions that make a meaningful impact. 
+            Always learning, always building.
+          </p>
         </div>
-        <div class="sidebar-card social-links">
-          <h3>🔗 Connect</h3>
+
+        <div class="sidebar-card social-links animate-on-scroll">
+          <h3>
+            <i class="fas fa-network-wired" aria-hidden="true"></i>
+            Let's Connect
+          </h3>
           <div class="social-icons">
-            <a href="https://github.com/Rufaro-code" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="https://zw.linkedin.com/in/rufaro-satoro-2565001b5" target="_blank"><i class="fab fa-linkedin"></i></a>
-            <a href="contact.html"><i class="fas fa-envelope"></i></a>
+            <a 
+              href="https://github.com/Rufaro-code" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              aria-label="Follow me on GitHub"
+            >
+              <i class="fab fa-github" aria-hidden="true"></i>
+            </a>
+            <a 
+              href="https://zw.linkedin.com/in/rufaro-satoro-2565001b5" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              aria-label="Connect with me on LinkedIn"
+            >
+              <i class="fab fa-linkedin" aria-hidden="true"></i>
+            </a>
+            <a 
+              href="contact.html"
+              aria-label="Send me an email"
+            >
+              <i class="fas fa-envelope" aria-hidden="true"></i>
+            </a>
+            <a 
+              href="mailto:rufarosatoro@gmail.com"
+              aria-label="Email me directly"
+            >
+              <i class="fas fa-paper-plane" aria-hidden="true"></i>
+            </a>
           </div>
         </div>
-        <div class="sidebar-card categories">
-          <h3>📂 Categories</h3>
-          <ul>
-            <li><a href="#" onclick="filterCategory('all')">All</a></li>
-            <li><a href="#" onclick="filterCategory('projects')">Projects</a></li>
-            <li><a href="#" onclick="filterCategory('tech-tips')">Tech Tips</a></li>
+
+        <div class="sidebar-card categories animate-on-scroll">
+          <h3>
+            <i class="fas fa-filter" aria-hidden="true"></i>
+            Filter Content
+          </h3>
+          <ul role="list">
+            <li>
+              <a 
+                href="#" 
+                onclick="filterCategory('all')" 
+                class="active"
+                role="button"
+                aria-pressed="true"
+              >
+                All Content
+              </a>
+            </li>
+            <li>
+              <a 
+                href="#" 
+                onclick="filterCategory('projects')"
+                role="button"
+                aria-pressed="false"
+              >
+                Projects
+              </a>
+            </li>
+            <li>
+              <a 
+                href="#" 
+                onclick="filterCategory('tech-tips')"
+                role="button"
+                aria-pressed="false"
+              >
+                Tech Insights
+              </a>
+            </li>
           </ul>
+        </div>
+
+        <div class="sidebar-card skills animate-on-scroll">
+          <h3>
+            <i class="fas fa-code-branch" aria-hidden="true"></i>
+            Core Skills
+          </h3>
+          <div class="skill-tags">
+            <span>JavaScript/TypeScript</span>
+            <span>React & Next.js</span>
+            <span>Node.js</span>
+            <span>UI/UX Design</span>
+            <span>Database Design</span>
+            <span>API Development</span>
+          </div>
         </div>
       </aside>
     </div>
   </main>
 
-  <!-- FOOTER -->
-  <footer class="site-footer">
-    <p>©Rufaro Satoro</p>
-    <div class="social-links">
-      <a href="https://github.com/rufarosatoro" target="_blank"><i class="fab fa-github"></i></a>
-      <a href="https://zw.linkedin.com/in/rufaro-satoro-2565001b5" target="_blank"><i class="fab fa-linkedin"></i></a>
-      <a href="mailto:rufarosatoro@gmail.com"><i class="fas fa-envelope"></i></a>
+  <button id="scrollToTopBtn" class="scroll-to-top-btn" aria-label="Scroll to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <p>&copy; 2025 Rufaro Satoro. Crafted with passion and precision.</p>
+      <div class="social-links">
+        <a 
+          href="https://github.com/Rufaro-code" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          aria-label="GitHub Profile"
+        >
+          <i class="fab fa-github" aria-hidden="true"></i>
+        </a>
+        <a 
+          href="https://zw.linkedin.com/in/rufaro-satoro-2565001b5" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          aria-label="LinkedIn Profile"
+        >
+          <i class="fab fa-linkedin" aria-hidden="true"></i>
+        </a>
+        <a 
+          href="mailto:rufarosatoro@gmail.com"
+          aria-label="Email Contact"
+        >
+          <i class="fas fa-envelope" aria-hidden="true"></i>
+        </a>
+      </div>
     </div>
   </footer>
 
-  <script src="script.js"></script>
+<script src="js/script.js" defer></script>
+<script src="js/theme.js"></script>
 
-  <script>
-    // Dark Mode Toggle
-    const themeToggle = document.getElementById('themeToggle');
-    themeToggle.addEventListener('click', () => {
-      document.body.classList.toggle('dark-mode');
-      themeToggle.textContent = document.body.classList.contains('dark-mode') ? '☀️' : '🌙';
-    });
-
-    // Typing Hero Effect
-    const words = [
-      "Technovator.",
-      "Web & Mobile Developer.",
-      "AI & Automation Enthusiast.",
-      "Blogger & Tech Writer.",
-      "Open Source Contributor."
-    ];
-    let wordIndex = 0, charIndex = 0, deleting = false;
-    const typingEl = document.getElementById('typing');
-
-    function type() {
-      const currentWord = words[wordIndex];
-      if(!deleting){
-        typingEl.textContent = currentWord.substring(0,charIndex+1);
-        charIndex++;
-        if(charIndex===currentWord.length){ deleting=true; setTimeout(type,1200); return; }
-      } else {
-        typingEl.textContent = currentWord.substring(0,charIndex-1);
-        charIndex--;
-        if(charIndex===0){ deleting=false; wordIndex=(wordIndex+1)%words.length; }
-      }
-      setTimeout(type,deleting?80:150);
-    }
-    type();
-
-    // Hero Canvas Particles
-    const canvas = document.getElementById('heroCanvas');
-    const ctx = canvas.getContext('2d');
-    let particlesArray;
-
-    function initParticles() {
-      canvas.width = canvas.offsetWidth;
-      canvas.height = canvas.offsetHeight;
-      particlesArray=[];
-      const numberOfParticles = 80;
-      for(let i=0;i<numberOfParticles;i++){
-        particlesArray.push({
-          x:Math.random()*canvas.width,
-          y:Math.random()*canvas.height,
-          size:Math.random()*3+1,
-          speedX:(Math.random()-0.5)*1.5,
-          speedY:(Math.random()-0.5)*1.5
-        });
-      }
-    }
-
-    function animateParticles(){
-      ctx.clearRect(0,0,canvas.width,canvas.height);
-      particlesArray.forEach(p=>{
-        ctx.beginPath();
-        ctx.arc(p.x,p.y,p.size,0,Math.PI*2);
-        ctx.fillStyle='rgba(76,175,239,0.8)';
-        ctx.fill();
-        p.x+=p.speedX; p.y+=p.speedY;
-        if(p.x>canvas.width)p.x=0;
-        if(p.x<0)p.x=canvas.width;
-        if(p.y>canvas.height)p.y=0;
-        if(p.y<0)p.y=canvas.height;
-      });
-      requestAnimationFrame(animateParticles);
-    }
-
-    window.addEventListener('resize',()=>{ initParticles(); });
-    initParticles();
-    animateParticles();
-  </script>
-
+  <div class="sr-only" aria-live="polite" id="page-announcements"></div>
+  
   <style>
-    /* Dark Mode Overrides */
-    body.dark-mode{
-      background:#111;
-      color:#f9f9f9;
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
     }
-    body.dark-mode .site-header,
-    body.dark-mode .nav-links{background:#222;}
-    body.dark-mode .hero .overlay{background:rgba(0,0,0,0.5);}
-    body.dark-mode .blog-card,
-    body.dark-mode .sidebar .sidebar-card{background:#222;color:#f9f9f9;}
-    body.dark-mode .btn.secondary{color:#4cafef;border:2px solid #4cafef;}
+
+    .skill-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 1rem;
+    }
+
+    .skill-tags span {
+      background: var(--gradient-primary);
+      color: var(--white);
+      padding: 0.25rem 0.75rem;
+      border-radius: 1rem;
+      font-size: 0.8rem;
+      font-weight: 500;
+    }
+
+    body.dark-mode .skill-tags span {
+      background: var(--gray-700);
+      color: var(--gray-300);
+      border: 1px solid var(--gray-600);
+    }
+
+    .categories a.active {
+      color: var(--primary) !important;
+      font-weight: 600;
+      position: relative;
+    }
+
+    .categories a.active::before {
+      content: '▶';
+      margin-right: 0.5rem;
+      color: var(--primary);
+    }
+
+    body.dark-mode .categories a.active {
+      color: var(--primary-light) !important;
+    }
+
+    body.dark-mode .categories a.active::before {
+      color: var(--primary-light);
+    }
+
+    /* Enhanced button hover effects */
+    .btn {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+      transition: left 0.5s ease;
+    }
+
+    .btn:hover::before {
+      left: 100%;
+    }
+
+    /* Loading states */
+    .loading-spinner-btn.loading {
+      cursor: not-allowed;
+      pointer-events: none;
+      color: transparent !important;
+      position: relative;
+    }
+
+    .loading-spinner-btn.loading::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 20px;
+      height: 20px;
+      border: 2px solid var(--white);
+      border-top-color: transparent;
+      border-right-color: transparent;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+      0% { transform: translate(-50%, -50%) rotate(0deg); }
+      100% { transform: translate(-50%, -50%) rotate(360deg); }
+    }
+
+    /* Enhanced focus styles for accessibility */
+    a:focus,
+    button:focus,
+    input:focus,
+    textarea:focus {
+      outline: 2px solid var(--primary);
+      outline-offset: 2px;
+      border-radius: 0.25rem;
+    }
+
+    /* Reduced motion support */
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+
+      #typing::after {
+        animation: none;
+      }
+
+      .btn::before {
+        display: none;
+      }
+    }
+
+    /* High contrast mode support */
+    @media (prefers-contrast: high) {
+      .btn {
+        border: 2px solid currentColor;
+      }
+
+      .blog-card,
+      .sidebar-card {
+        border: 2px solid var(--gray-400);
+      }
+
+      .hero-image img {
+        border: 3px solid var(--gray-900);
+      }
+    }
+
+    /* Print styles */
+    @media print {
+      .site-header,
+      .hamburger,
+      #themeToggle,
+      .social-icons,
+      #heroCanvas,
+      .btn,
+      .scroll-to-top-btn {
+        display: none !important;
+      }
+
+      .hero {
+        background: none !important;
+        color: black !important;
+        margin-top: 0;
+      }
+
+      .blog-card,
+      .sidebar-card {
+        border: 1px solid #ccc;
+        box-shadow: none;
+        break-inside: avoid;
+      }
+
+      body {
+        background: white !important;
+        color: black !important;
+      }
+    }
+
+    /* NEW: SKILLS & EXPERTISE STYLES */
+    .skills-grid {
+      display: grid;
+      gap: 1.5rem;
+      margin-top: 2rem;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    .skill-card {
+      background-color: var(--card-bg);
+      padding: 1.5rem;
+      border-radius: var(--border-radius);
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .skill-name {
+      font-weight: 600;
+      color: var(--text-heading);
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .skill-name i {
+      color: var(--primary);
+      font-size: 1.25rem;
+    }
+
+    .skill-bar-container {
+      background-color: var(--gray-300);
+      height: 8px;
+      border-radius: 5px;
+      overflow: hidden;
+      width: 100%;
+    }
+
+    body.dark-mode .skill-bar-container {
+      background-color: var(--gray-700);
+    }
+
+    .skill-bar {
+      height: 100%;
+      background: var(--gradient-primary);
+      transition: width 1s ease-in-out;
+    }
+
+    /* NEW: SCROLL TO TOP BUTTON STYLES */
+    .scroll-to-top-btn {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      width: 3rem;
+      height: 3rem;
+      background: var(--gradient-primary);
+      color: var(--white);
+      border: none;
+      border-radius: 50%;
+      box-shadow: var(--shadow-md);
+      cursor: pointer;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(20px);
+      transition: all 0.3s ease;
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .scroll-to-top-btn.show {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    /* Typing effect cursor */
+    #typing {
+        border-right: 2px solid;
+        animation: blink-caret 0.75s step-end infinite;
+    }
+
+    @keyframes blink-caret {
+        from, to { border-color: transparent }
+        50% { border-color: currentColor; }
+    }
+
   </style>
 
+  <script>
+    // Preload critical resources
+    const preloadLinks = [
+      'projects.html',
+      'contact.html'
+    ];
+
+    preloadLinks.forEach(href => {
+      const link = document.createElement('link');
+      link.rel = 'prefetch';
+      link.href = href;
+      document.head.appendChild(link);
+    });
+
+    // Update page announcements for screen readers
+    const announcePageChange = (message) => {
+      const announcer = document.getElementById('page-announcements');
+      if (announcer) {
+        announcer.textContent = message;
+        setTimeout(() => announcer.textContent = '', 1000);
+      }
+    };
+
+    // Service worker registration for PWA capabilities
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js')
+          .then(registration => {
+            console.log('SW registered: ', registration);
+          })
+          .catch(registrationError => {
+            console.log('SW registration failed: ', registrationError);
+          });
+      });
+    }
+  </script>
+<script src="js/theme.js"></script>
 </body>
 </html>

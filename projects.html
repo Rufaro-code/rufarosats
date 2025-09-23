@@ -50,13 +50,23 @@
   <header class="site-header">
     <div class="container nav-container">
       <h1 class="logo">Rufaro<span>Satoro</span></h1>
+
+      <!-- Hamburger for Mobile -->
+      <div class="hamburger" id="hamburger">
+        <i class="fas fa-bars"></i>
+      </div>
+
       <nav>
-        <ul class="nav-links">
+        <ul class="nav-links" id="navLinks">
           <li><a href="index.html">Home</a></li>
           <li><a href="projects.html" class="active">Projects</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
+
+      <div class="theme-toggle">
+        <button id="themeToggle">🌙</button>
+      </div>
     </div>
   </header>
 
@@ -194,17 +204,50 @@
     </div>
   </main>
 
-  <!-- FOOTER -->
-  <footer class="site-footer">
-    <div class="footer-container">
-      <p>© 2025 Rufaro Satoro</p>
-      <div class="social-links">
-        <a href="https://github.com/Rufaro-code" target="_blank"><i class="fab fa-github"></i></a>
-        <a href="https://zw.linkedin.com/in/rufaro-satoro-2565001b5" target="_blank"><i class="fab fa-linkedin"></i></a>
-        <a href="contact.html"><i class="fas fa-envelope"></i></a>
-      </div>
+  <!-- ENHANCED FOOTER -->
+<footer class="site-footer" role="contentinfo">
+  <div class="container">
+    <p>&copy; 2025 Rufaro Satoro. Crafted with passion and precision.</p>
+    <div class="social-links">
+      <a 
+        href="https://github.com/Rufaro-code" 
+        target="_blank" 
+        rel="noopener noreferrer"
+        aria-label="GitHub Profile"
+      >
+        <i class="fab fa-github" aria-hidden="true"></i>
+      </a>
+      <a 
+        href="https://zw.linkedin.com/in/rufaro-satoro-2565001b5" 
+        target="_blank" 
+        rel="noopener noreferrer"
+        aria-label="LinkedIn Profile"
+      >
+        <i class="fab fa-linkedin" aria-hidden="true"></i>
+      </a>
+      <a 
+        href="mailto:rufarosatoro@gmail.com"
+        aria-label="Email Contact"
+      >
+        <i class="fas fa-envelope" aria-hidden="true"></i>
+      </a>
     </div>
-  </footer>
+  </div>
+</footer>
+
+  <!-- SCRIPTS -->
+  <script src="js/main.js"></script>
+  <script src="js/theme.js"></script>
+
+  <!-- Hamburger Toggle Script -->
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+      hamburger.classList.toggle('active');
+    });
+  </script>
 
 </body>
 </html>
